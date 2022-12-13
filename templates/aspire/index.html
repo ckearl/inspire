@@ -1,0 +1,41 @@
+ <!-- no django forms required -->
+
+ {% extends 'base.html'%}
+ {% load static %}
+ {% block title %} Landing {% endblock %}
+ {% block content %}
+
+ <style>
+     .index-background {
+     background-image: url("{% static 'admin/img/food_bg.png'%}");
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     top: 0;
+     }
+ </style>
+ <body class="sb-nav-fixed sb-sidenav-toggled index-background">
+     <div id="layoutSidenav">
+         <div id="layoutSidenav_content">
+             <main>
+                 <br><br>
+                 <div class="row">
+                     <div class="container-fluid px-4 col-md-4">
+                         <h1 class="mt-4 text-light">Welcome to Aspire Dietary Solutions</h1>
+                         <ol class="breadcrumb mb-4">
+                             <li class="breadcrumb-item active text-light">We prioritize your health</li>
+                         </ol>
+                         <div class="row">
+                             <div class="justity-content-between">
+                         <a class= "btn btn-primary col-md-4" href = "{% url 'login' %}">login</a>
+                         
+                         <a class = 'btn btn-light col-md-4' href = "{% url 'register' %}">signup</a>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="container-fluid px-4 col-md-4">
+                 </div>
+             </main>
+         </div>
+     </div>
+ {% endblock %}
